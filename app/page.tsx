@@ -128,7 +128,7 @@ export default function HomePage() {
           <p className="text-xs tracking-[0.5em] uppercase text-gold/70 mb-6 font-body animate-fade-up opacity-0-init">
             Welcome to
           </p>
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-4 animate-fade-up delay-100 opacity-0-init">
+          <h1 className="font-display text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none mb-4 animate-fade-up delay-100 opacity-0-init">
             <span className="shimmer-text">International</span>
             <br />
             <span className="text-cream">Miracle</span>
