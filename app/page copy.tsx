@@ -11,7 +11,6 @@ import {
 } from 'react-icons/hi'
 import { FaFire, FaCross, FaPray, FaHeart } from 'react-icons/fa'
 import { useReveal } from '@/hooks/useReveal'
-import Image from 'next/image'
 
 // ─── Hero background particles (purely decorative) ───────────────────────────
 function CrossLight({ className }: { className?: string }) {
@@ -105,26 +104,19 @@ export default function HomePage() {
   return (
     <main className="bg-navy text-cream overflow-hidden">
       {/* ─── HERO ──────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden ">
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-40 pb-20">
         {/* Background gradient */}
-        {/* <div className="absolute inset-0 bg-linear-to-b from-navy via-navy-mid to-navy" /> */}
+        <div className="absolute inset-0 bg-linear-to-b from-navy via-navy-mid to-navy" />
         {/* Radial gold glow */}
-        {/* <div className="absolute inset-0 bg-radial-gold opacity-60" /> */}
+        <div className="absolute inset-0 bg-radial-gold opacity-60" />
         {/* Decorative cross lights */}
-        {/* <CrossLight className="w-24 h-24 top-24 left-[10%] animate-float" />
+        <CrossLight className="w-24 h-24 top-24 left-[10%] animate-float" />
         <CrossLight className="w-16 h-16 top-40 right-[15%] animate-float delay-300" />
         <CrossLight className="w-12 h-12 bottom-32 left-[20%] animate-float delay-500" />
-        <CrossLight className="w-20 h-20 bottom-48 right-[8%] animate-float delay-200" /> */}
-        <Image
-          src={'/pa.jpg'}
-          alt='bg'
-          height={500}
-          width={500}
-          className='absolute w-full h-full object-cover opacity-40'
-        />
+        <CrossLight className="w-20 h-20 bottom-48 right-[8%] animate-float delay-200" />
 
         {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto pt-40 pb-20">
+        <div className="relative z-10 max-w-4xl mx-auto">
           <p className="text-xs tracking-[0.5em] uppercase text-gold/70 mb-6 font-body animate-fade-up opacity-0-init">
             Welcome to
           </p>
@@ -155,8 +147,13 @@ export default function HomePage() {
               Learn More <HiArrowRight />
             </Link>
           </div>
-
         </div>
+
+        {/* Scroll indicator */}
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in delay-600 opacity-0-init">
+          <span className="text-xs tracking-[0.3em] uppercase text-cream/30 font-body">Scroll</span>
+          <div className="w-px h-12 bg-linear-to-b from-gold/50 to-transparent" />
+        </div> */}
       </section>
 
       {/* ─── SCHEDULE ──────────────────────────────────────────────────────── */}
@@ -253,10 +250,11 @@ export default function HomePage() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ${i === activeTestimonial
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-4 pointer-events-none'
-                  }`}
+                className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ${
+                  i === activeTestimonial
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-4 pointer-events-none'
+                }`}
               >
                 <svg className="w-8 h-8 text-gold/40 mb-6" viewBox="0 0 40 30" fill="currentColor">
                   <path d="M0 30V18C0 7.6 6.667 1.933 20 0l2 4C15.333 5.333 12 8.667 12 14h6v16H0zm22 0V18C22 7.6 28.667 1.933 42 0l2 4C37.333 5.333 34 8.667 34 14h6v16H22z" />
@@ -277,10 +275,11 @@ export default function HomePage() {
               <button
                 key={i}
                 onClick={() => setActiveTestimonial(i)}
-                className={`transition-all duration-300 ${i === activeTestimonial
-                  ? 'w-8 h-1.5 bg-gold'
-                  : 'w-3 h-1.5 bg-cream/20 hover:bg-cream/40'
-                  }`}
+                className={`transition-all duration-300 ${
+                  i === activeTestimonial
+                    ? 'w-8 h-1.5 bg-gold'
+                    : 'w-3 h-1.5 bg-cream/20 hover:bg-cream/40'
+                }`}
                 aria-label={`Testimonial ${i + 1}`}
               />
             ))}
