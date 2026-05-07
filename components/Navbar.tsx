@@ -100,7 +100,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="#schedule"
+                        href="/#schedule"
                         onClick={() => setMenuOpen(false)}
                         className="text-sm tracking-widest uppercase font-body font-500 px-5 py-2.5 border border-gold/60 text-gold text-center hover:bg-gold hover:text-navy transition-all duration-300 mt-2"
                     >
