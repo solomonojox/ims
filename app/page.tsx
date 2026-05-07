@@ -14,18 +14,18 @@ import { useReveal } from '@/hooks/useReveal'
 import Image from 'next/image'
 
 // ─── Hero background particles (purely decorative) ───────────────────────────
-function CrossLight({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 40 40"
-      className={`absolute opacity-10 ${className}`}
-      fill="none"
-    >
-      <line x1="20" y1="0" x2="20" y2="40" stroke="#c9a84c" strokeWidth="1" />
-      <line x1="0" y1="20" x2="40" y2="20" stroke="#c9a84c" strokeWidth="1" />
-    </svg>
-  )
-}
+// function CrossLight({ className }: { className?: string }) {
+//   return (
+//     <svg
+//       viewBox="0 0 40 40"
+//       className={`absolute opacity-10 ${className}`}
+//       fill="none"
+//     >
+//       <line x1="20" y1="0" x2="20" y2="40" stroke="#c9a84c" strokeWidth="1" />
+//       <line x1="0" y1="20" x2="40" y2="20" stroke="#c9a84c" strokeWidth="1" />
+//     </svg>
+//   )
+// }
 
 // ─── Schedule card data ───────────────────────────────────────────────────────
 const schedule = [

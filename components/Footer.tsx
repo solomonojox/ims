@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa'
+import { FaX } from 'react-icons/fa6'
 import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi'
 
 export default function Footer() {
@@ -29,8 +30,9 @@ export default function Footer() {
                         <div className="flex gap-4 mt-6">
                             {[
                                 { icon: <FaFacebook />, href: 'https://www.facebook.com/internationalmiracleservice' },
-                                { icon: <FaYoutube />, href: '#' },
+                                { icon: <FaYoutube />, href: 'https://www.youtube.com/@InternationalMiracleService' },
                                 { icon: <FaWhatsapp />, href: '#' },
+                                { icon: <FaX />, href: 'https://x.com/IMS_Centre' },
                             ].map((s, i) => (
                                 <a
                                     key={i}

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { HiMenu, HiX } from 'react-icons/hi'
 import Image from 'next/image'
+import { Link as LinkScroll } from 'react-scroll';
 
 const navLinks = [
     { href: '/', label: 'Home' },
@@ -64,7 +65,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Link
-                        href="#schedule"
+                        href="/#schedule"
                         className="ml-2 text-sm tracking-widest uppercase font-body font-500 px-5 py-2 border border-gold/60 text-gold hover:bg-gold hover:text-navy transition-all duration-300"
                     >
                         Join Us
